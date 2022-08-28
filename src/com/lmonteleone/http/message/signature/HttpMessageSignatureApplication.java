@@ -47,7 +47,7 @@ public class HttpMessageSignatureApplication {
 		System.out.println(Constants.SEPARETOR);
 		System.out.println(method.name() + " Request Logs\n" + Constants.SEPARETOR + "\n");
 		System.out.println("Request Payload:");
-		System.out.println(payload != "" ?  new JSONObject(payload).toString(4) + "\n" : "Empty" + "\n");
+		System.out.println(payload != "" ?  payload + "\n" : "Empty" + "\n");
 
 		// compute Signing String
 		signingString = HttpMessageSignature.createSigningString(method.name(), header, Constants.PATH);
